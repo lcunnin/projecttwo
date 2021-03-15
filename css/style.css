@@ -1,0 +1,164 @@
+/*Paul Irish Reset: https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* https://coolors.co/52d6fa-408697-f6f6f6-8d8c8a-363538-a6a1a2 */
+
+:root {
+  --bkgd_main: #363538;
+  --header: #408697;
+  --text: #000000;
+  --button: #FFB703;
+  --country: #52d6fa;
+  --city_bkgd: #f6f6f6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+body {
+    font-family: 'Questrial', sans-serif;
+    background-color: var(--bkgd_main);
+    color: var(--text);
+    padding: 50px;
+    font-size: 4rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: var(--city_bkgd);
+    font-size: 3rem;
+    height: 50px;
+    padding: 10px 10px;
+}
+
+button {
+    font-weight: bold;
+    background-color: var(--button);
+    cursor: pointer;
+    height: 50px;
+    padding: 10px 20px;
+    border-bottom: 1px solid;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+}
+
+.heading {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: var(--header);
+    font-size: 10rem;
+}
+
+.weather-search {
+    display: flex;
+    justify-content: center;
+}
+
+.location-section {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    width: 350px;
+    margin: 40px auto;
+}
+
+.city {
+    list-style: none;
+    background-color: var(--city_bkgd);
+}
+
+.location-section figcaption {
+    margin-top: 10px;
+    letter-spacing: .5rem;
+}
+  
+.location-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text);
+}
+  
+.location-section .city sup {
+    font-size: 0.5em;
+    justify-items: center;
+}
+  
+.location-section .city-name sup {
+    padding: 5px;
+    font-size: 2.5rem;
+    border-radius: 15px;
+    color: var(--text);
+    background: var(--country);
+}
+  
+.location-section .city-icon {
+    margin-top: 10px;
+    width: 150px;
+}
+
+.msg {
+    margin-top: 50px;
+    color: white;
+}
+
+@media screen and (max-width: 720px) {
+    input {
+     width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .heading {
+        font-size: 5rem;
+    }
+    
+    .location-section .city-temp {
+        font-size: 3rem;
+    }
+  
+    .location-section {
+        margin-top: 20px;
+    }
+  
+    .msg {
+      margin-top: 30px;
+    }
+  
+    .city {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+  }
+}

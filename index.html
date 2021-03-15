@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="app-title">
+      <h1 class="heading">Weather Forecast</h1>
+    </div>
+  </div>
+  <div class="weather-search">
+    <form>
+      <input type="text" placeholder="Search a location">
+      <button type="submit">SUBMIT</button>
+      <span class="msg"></span>
+    </form>
+    </div>
+  <div class="location-section">
+    <ul class="city">
+      <li>
+        <h2 class="city-name">
+          <span>Melbourne</span>
+          <sup>Australia</sup>
+        </h2>
+        <div class="city-temp">35<sup>°C</sup></div>
+        <figure>
+          <img class="city-icon" src="${icon}" 
+            alt="Caption text">
+          <figcaption>Caption text</figcaption>
+        </figure>  
+      </li>    
+    </ul>
+  </div>
+  <script src="./js/weather.js"></script>
+</body>
+</html>
