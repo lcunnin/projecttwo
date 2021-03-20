@@ -48,7 +48,6 @@ input {
     font-size: 3rem;
     color: white;
     height: 50px;
-    margin-top: 10px;
     padding: 10px 10px;
     width: 100%;
 }
@@ -80,6 +79,7 @@ button:hover {
     align-items: center;
 }
 
+
 .city {
     margin-top: 20px;
     padding: 20px 15px 20px 15px;
@@ -90,6 +90,7 @@ button:hover {
     background-color: var(--city_bkgd);
     position: relative;
     border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 .location-section figcaption {
@@ -121,16 +122,21 @@ button:hover {
 }
 
 .msg {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
     font-size: 3rem;
     color: white;
-    text-align: center;
 }
 
 @media screen and (min-width: 720px) {
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     input {
         width: 400px;
-        margin-top: 10px;
        }
    
     button {
@@ -142,18 +148,18 @@ button:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        font-size: 7rem;
     }
 
-    form {
+    .location-section {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        margin: 30px 20px;
     }
 
     .cities {
-        display: flex;
-        margin: 20px 20px;
-      }
+        width: 100%    
+    }
        
        .city-temp {
            font-size: 3rem;
@@ -169,47 +175,10 @@ button:hover {
         padding: 30px;
     }
     
-    input {
-        font-size: 3rem;
-        color: white;
-        height: 50px;
-        margin-top: 10px;
-        padding: 10px 20px;
-    }
-    
-    button {
-        font-weight: bold;
-        background-color: var(--button);
-        cursor: pointer;
-        height: 50px;
-        margin-left: 10px;
-        padding: 10px 20px;
-    }
-    
-    button:hover {
-        background-color:#887d62;
-    }
-    
     .heading {
         margin-bottom: 30px;
         color: var(--header);
         font-size: 8rem;
-    }
-    
-    form {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    form .msg {
-        max-width: 450px;
-        min-height: 40px;
-    }
-
-    .cities {
-        display: flex;
-        margin: 20px 20px;
     }
     
     .city {
