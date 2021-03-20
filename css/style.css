@@ -19,7 +19,7 @@ html {
   --text: #000000;
   --button: #FFB703;
   --country: #52d6fa;
-  --city_bkgd: #f6f6f6;
+  --city_bkgd: #929090;
 }
 
 a {
@@ -27,34 +27,30 @@ a {
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-
 body {
     font-family: 'Questrial', sans-serif;
     background-color: var(--bkgd_main);
     color: var(--text);
     padding: 50px;
-    font-size: 4rem;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+ul {
+    list-style: none;
+}
+
+button, input {
+    border: none;
+    outline: none;
+    background: none;
 }
 
 input {
-    border: none;
-    outline: none;
-    background: var(--city_bkgd);
     font-size: 3rem;
+    color: white;
     height: 50px;
+    margin-top: 10px;
     padding: 10px 10px;
+    width: 100%;
 }
 
 button {
@@ -63,56 +59,56 @@ button {
     cursor: pointer;
     height: 50px;
     padding: 10px 20px;
-    border-bottom: 1px solid;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+button:hover {
+    background-color:#887d62;
 }
 
 .heading {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
     margin-bottom: 30px;
     color: var(--header);
-    font-size: 10rem;
+    font-size: 5rem;
 }
 
-.weather-search {
+.form {
     display: flex;
-    justify-content: center;
-}
-
-.location-section {
-    display: flex;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    width: 350px;
-    margin: 40px auto;
+    align-items: center;
 }
 
 .city {
+    margin-top: 20px;
+    padding: 20px 15px 20px 15px;
+    text-transform: uppercase;
+    text-align: center;
     list-style: none;
+    font-size: 4rem;
     background-color: var(--city_bkgd);
+    position: relative;
+    border-radius: 20px;
 }
 
 .location-section figcaption {
     margin-top: 10px;
+    margin-bottom: 5px;
     letter-spacing: .5rem;
 }
   
-.location-section .city-temp {
-    font-size: 5rem;
+.city-temp {
+    font-size: 6rem;
     font-weight: bold;
     margin-top: 10px;
-    color: var(--text);
 }
   
-.location-section .city sup {
+.city sup {
     font-size: 0.5em;
-    justify-items: center;
 }
   
-.location-section .city-name sup {
+.city-name sup {
     padding: 5px;
     font-size: 2.5rem;
     border-radius: 15px;
@@ -120,45 +116,104 @@ button {
     background: var(--country);
 }
   
-.location-section .city-icon {
-    margin-top: 10px;
+.city-icon {
     width: 150px;
 }
 
 .msg {
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 3rem;
     color: white;
+    text-align: center;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {
     input {
-     width: 100%;
-    }
-
-    button {
-        width: 100%;
+        width: 400px;
         margin-top: 10px;
+       }
+   
+    button {
+        margin-top: 10px;
+        width: 150px;
     }
 
     .heading {
-        font-size: 5rem;
-    }
-    
-    .location-section .city-temp {
-        font-size: 3rem;
-    }
-  
-    .location-section {
-        margin-top: 20px;
-    }
-  
-    .msg {
-      margin-top: 30px;
-    }
-  
-    .city {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-  }
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cities {
+        display: flex;
+        margin: 20px 20px;
+      }
+       
+       .city-temp {
+           font-size: 3rem;
+       }
+     
+       .msg {
+         margin-top: 30px;
+       }
+   }
+
+@media screen and (min-width: 1000px) {
+    body {
+        padding: 30px;
+    }
+    
+    input {
+        font-size: 3rem;
+        color: white;
+        height: 50px;
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+    
+    button {
+        font-weight: bold;
+        background-color: var(--button);
+        cursor: pointer;
+        height: 50px;
+        margin-left: 10px;
+        padding: 10px 20px;
+    }
+    
+    button:hover {
+        background-color:#887d62;
+    }
+    
+    .heading {
+        margin-bottom: 30px;
+        color: var(--header);
+        font-size: 8rem;
+    }
+    
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    form .msg {
+        max-width: 450px;
+        min-height: 40px;
+    }
+
+    .cities {
+        display: flex;
+        margin: 20px 20px;
+    }
+    
+    .city {
+        border-radius: 20px;
+        margin: 20px 20px;
+    }
 }

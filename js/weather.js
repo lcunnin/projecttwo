@@ -1,7 +1,7 @@
 const form = document.querySelector(".weather-search form");
 const input = document.querySelector(".weather-search input");
 const msg = document.querySelector(".weather-search .msg");
-const list = document.querySelector(".location-section");
+const list = document.querySelector(".location-section .cities");
 
 /*https://home.openweathermap.org/*/
 const apiKey = "bd578d213152f33eaf1ebd4cade5161e";
@@ -10,7 +10,7 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   let inputVal = input.value;
 
-  const listItems = list.querySelectorAll(".location-section cities");
+  const listItems = list.querySelectorAll(".location-section .city");
   const listItemsArray = Array.from(listItems);
 
   if (listItemsArray.length > 0) {
@@ -35,10 +35,10 @@ form.addEventListener("submit", e => {
     });
 
     if (filteredArray.length > 0) {
-      msg.textContent = `You already know the weather for ${
+      msg.textContent = `You searched ${
         filteredArray[0].querySelector(".city-name span").textContent
-      }`;
-      
+      } already`;
+
       form.reset();
       input.focus();
       return;
@@ -52,10 +52,11 @@ form.addEventListener("submit", e => {
     .then(data => {
       const { main, name, sys, weather } = data;
       const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
+
       let li = document.createElement("li");
       li.classList.add("city");
       const markup = `
-        <h2 class="city-name" data-name="${name},${sys.country}">
+        <h2 class="city-name">
           <span>${name}</span>
           <sup>${sys.country}</sup>
         </h2>
