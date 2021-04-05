@@ -1,3 +1,5 @@
+/*Referenced https://codepen.io/tutsplus/details/gObLaEP */
+
 const form = document.querySelector(".weather-search form");
 const input = document.querySelector(".weather-search input");
 const msg = document.querySelector(".weather-search .msg");
